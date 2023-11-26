@@ -11,8 +11,8 @@ document.body.appendChild(renderer.domElement);
 
 const sphereGeometry = new THREE.SphereGeometry(5, 32, 32);
 const sphereMaterial = new THREE.PointsMaterial({
-    color: 0xffffff,
-    size: 0.06
+    color: 0xfcfc03f,
+    size: 0.1
 });
 
 const sphere = new THREE.Points(sphereGeometry, sphereMaterial);
@@ -21,14 +21,14 @@ scene.add(sphere);
 const loader = new FontLoader();
 let textGeometry;
 let textMaterial;
-loader.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json', (font) => {
+loader.load('https://threejs.org/examples/fonts/gentilis_regular.typeface.json', (font) => {
     const options = {
         font: font,
         size: 1,
         height: 0.1
     };
 
-    textGeometry = new TextGeometry('Tra My', options);
+    textGeometry = new TextGeometry('ĐỨC VŨ', options);
     textMaterial = new THREE.MeshBasicMaterial({
         color: 0xfc0303
     });
